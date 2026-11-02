@@ -1,1 +1,311 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcase | WeCan Connect</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>WeCan Connect</h1>
+        <p>Discover, share and celebrate community projects.</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="showcase.html">Project Showcase</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Introduction -->
+        <section>
+            <h2>Project Showcase</h2>
+            <p>
+                Explore projects created by members of our community.
+                Share your work, receive feedback and support other creators.
+            </p>
+        </section>
+
+        <!-- Project Search and Filters -->
+        <section>
+            <h2>Find Projects</h2>
+
+            <form action="#" method="get">
+                <label for="search">Search projects:</label>
+                <input type="search" id="search" name="search">
+
+                <br><br>
+
+                <label for="category">Filter by category:</label>
+                <select id="category" name="category">
+                    <option value="">All Categories</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="mobile-app">Mobile Applications</option>
+                    <option value="education">Education</option>
+                    <option value="technology">Technology</option>
+                </select>
+
+                <br><br>
+
+                <label for="technology-filter">Filter by technology:</label>
+                <select id="technology-filter" name="technology">
+                    <option value="">All Technologies</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                </select>
+
+                <br><br>
+
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <!-- Featured Projects -->
+        <section>
+            <h2>Featured Projects</h2>
+
+            <p>Projects selected by authorized administrators.</p>
+
+            <article>
+                <h3>Flood Navi</h3>
+                <p><strong>Featured Project</strong></p>
+                <p>
+                    A project designed to help communities access
+                    flood-related information and alerts.
+                </p>
+                <p><strong>Owner:</strong> Project Member</p>
+                <img src="images/flood-navi.jpg"
+                     alt="Flood Navi project screenshot"
+                     width="300">
+
+                <p>
+                    <a href="#">GitHub Repository</a>
+                    <a href="#">Live Demo</a>
+                </p>
+            </article>
+        </section>
+
+        <!-- Project Gallery -->
+        <section>
+            <h2>Community Project Gallery</h2>
+
+            <article>
+                <h3>Flood Navi</h3>
+
+                <img src="images/flood-navi.jpg"
+                     alt="Screenshot of Flood Navi"
+                     width="300">
+
+                <p>
+                    A project designed to help communities access
+                    flood-related information.
+                </p>
+
+                <p><strong>Owner:</strong> Project Member</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+
+                <p>
+                    <a href="#">View GitHub Project</a>
+                    <a href="#">View Live Demo</a>
+                </p>
+
+                <p><a href="#feedback">Give Feedback</a></p>
+                <p><a href="#voting">Vote for this Project</a></p>
+            </article>
+
+            <article>
+                <h3>Student Portfolio</h3>
+
+                <img src="images/portfolio.jpg"
+                     alt="Screenshot of Student Portfolio"
+                     width="300">
+
+                <p>
+                    A personal website showcasing skills,
+                    achievements and completed projects.
+                </p>
+
+                <p><strong>Owner:</strong> Project Member</p>
+                <p><strong>Technologies:</strong> HTML and CSS</p>
+
+                <p>
+                    <a href="#">View GitHub Project</a>
+                    <a href="#">View Live Demo</a>
+                </p>
+
+                <p><a href="#feedback">Give Feedback</a></p>
+                <p><a href="#voting">Vote for this Project</a></p>
+            </article>
+        </section>
+
+        <!-- Project Details -->
+        <section>
+            <h2>Project Details</h2>
+
+            <article>
+                <h3>Flood Navi - Project Information</h3>
+
+                <img src="images/flood-navi.jpg"
+                     alt="Flood Navi project preview"
+                     width="400">
+
+                <p><strong>Project Owner:</strong> Project Member</p>
+
+                <p>
+                    <strong>Description:</strong>
+                    Flood Navi helps communities access useful
+                    flood information and alerts.
+                </p>
+
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
+
+                <p>
+                    <a href="#">GitHub Repository</a>
+                </p>
+
+                <p>
+                    <a href="#">Live Demo</a>
+                </p>
+            </article>
+        </section>
+
+        <!-- Voting -->
+        <section id="voting">
+            <h2>Vote for Your Favourite Project</h2>
+
+            <p>Support projects you find useful and creative.</p>
+
+            <form action="#" method="post">
+                <label for="project-vote">Choose a project:</label>
+
+                <select id="project-vote" name="project-vote">
+                    <option value="">Select a project</option>
+                    <option value="flood-navi">Flood Navi</option>
+                    <option value="student-portfolio">Student Portfolio</option>
+                </select>
+
+                <br><br>
+
+                <button type="submit">Submit Vote</button>
+            </form>
+
+            <h3>Voting Results</h3>
+            <p>Vote totals will be displayed here.</p>
+        </section>
+
+        <!-- Feedback -->
+        <section id="feedback">
+            <h2>Project Feedback</h2>
+
+            <p>Share constructive feedback with project owners.</p>
+
+            <form action="#" method="post">
+
+                <label for="feedback-project">Select Project:</label>
+                <select id="feedback-project" name="project">
+                    <option value="">Choose a project</option>
+                    <option value="flood-navi">Flood Navi</option>
+                    <option value="student-portfolio">Student Portfolio</option>
+                </select>
+
+                <br><br>
+
+                <label for="reviewer">Your Name:</label>
+                <input type="text" id="reviewer" name="reviewer">
+
+                <br><br>
+
+                <label for="rating">Project Rating:</label>
+                <select id="rating" name="rating">
+                    <option value="">Choose rating</option>
+                    <option value="5">Excellent - 5</option>
+                    <option value="4">Very Good - 4</option>
+                    <option value="3">Good - 3</option>
+                    <option value="2">Fair - 2</option>
+                    <option value="1">Poor - 1</option>
+                </select>
+
+                <br><br>
+
+                <label for="comments">Your Feedback:</label>
+                <textarea id="comments" name="comments"
+                          rows="5" cols="40"></textarea>
+
+                <br><br>
+
+                <button type="submit">Submit Feedback</button>
+
+            </form>
+        </section>
+
+        <!-- Project Submission -->
+        <section id="submit-project">
+            <h2>Submit Your Project</h2>
+
+            <p>Have a project to share? Submit it to our community.</p>
+
+            <form action="#" method="post"
+                  enctype="multipart/form-data">
+
+                <label for="project-name">Project Name:</label>
+                <input type="text" id="project-name"
+                       name="project-name" required>
+
+                <br><br>
+
+                <label for="owner">Project Owner:</label>
+                <input type="text" id="owner" name="owner" required>
+
+                <br><br>
+
+                <label for="description">Project Description:</label>
+                <textarea id="description" name="description"
+                          rows="5" required></textarea>
+
+                <br><br>
+
+                <label for="screenshot">Project Screenshot:</label>
+                <input type="file" id="screenshot"
+                       name="screenshot" accept="image/*">
+
+                <br><br>
+
+                <label for="technologies">Technologies Used:</label>
+                <input type="text" id="technologies"
+                       name="technologies"
+                       placeholder="HTML, CSS, JavaScript">
+
+                <br><br>
+
+                <label for="github">GitHub URL:</label>
+                <input type="url" id="github" name="github">
+
+                <br><br>
+
+                <label for="live-demo">Live Demo URL:</label>
+                <input type="url" id="live-demo" name="live-demo">
+
+                <br><br>
+
+                <button type="submit">Submit Project</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 WeCan Connect. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
