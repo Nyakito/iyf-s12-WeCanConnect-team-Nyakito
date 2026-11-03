@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>WeCan Connect – Admin Panel</title>
+    </head>
+    <body>
+        <aside>
+            <h1>WeCan Connect</h1>
+            <p>Administration</p>
+            <nav aria-label="Admin sections">
+                <ul>
+                    <li>
+                        <a href="#dashboard">Dashboard</a>
+                    </li>
+                    <li>
+                        <small>People</small>
+                    </li>
+                    <li>
+                        <a href="#users">Members</a>
+                    </li>
+                    <li>
+                        <a href="#cohorts">Cohorts and seasons</a>
+                    </li>
+                    <li>
+                        <a href="#roles">Roles and permissions</a>
+                    </li>
+                    <li>
+                        <small>Community</small>
+                    </li>
+                    <li>
+                        <a href="#posts">Tech feed posts</a>
+                    </li>
+                    <li>
+                        <a href="#comments">Comments</a>
+                    </li>
+                    <li>
+                        <a href="#reports">Reports and moderation</a>
+                    </li>
+                    <li>
+                        <a href="#announcements">Announcements</a>
+                    </li>
+                    <li>
+                        <small>Growth</small>
+                    </li>
+                    <li>
+                        <a href="#bounties">Bounty board</a>
+                    </li>
+                    <li>
+                        <a href="#showcase">Quarterly showcase</a>
+                    </li>
+                    <li>
+                        <a href="#recognition">Badges and recognition</a>
+                    </li>
+                    <li>
+                        <small>System</small>
+                    </li>
+                    <li>
+                        <a href="#analytics">Analytics</a>
+                    </li>
+                    <li>
+                        <a href="#audit">Audit log</a>
+                    </li>
+                    <li>
+                        <a href="#settings">Settings</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="workspace">
+            <header>
+                <form role="search" aria-label="Search the admin panel">
+                    <label for="global-search" hidden="">Search</label>
+                    <input id="global-search" type="search" placeholder="Search members, posts, bounties" data-filter="main">
+                </form>
+                <details>
+                    <summary>Admin Nyakito</summary>
+                    <menu style="margin:.5rem 0 0;padding:0;list-style:none">
+                        <li>
+                            <button type="button">My account</button>
+                        </li>
+                        <li>
+                            <button type="button" class="danger">Log out</button>
+                        </li>
+                    </menu>
+                </details>
+            </header>
+            <main>
+                <!-- DASHBOARD -->
+                <section id="dashboard" aria-labelledby="h-dashboard">
+                    <header>
+                        <h2 id="h-dashboard">Dashboard</h2>
+                        <p>What needs your attention today.</p>
+                    </header>
+                    <div class="grid">
+                        <article class="panel">
+                            <dl class="stat">
+                                <dt>Active members</dt>
+                                <dd>
+                                    1,284
+                                    <small>+38 this week</small>
+                                </dd>
+                            </dl>
+                        </article>
+                        <article class="panel">
+                            <dl class="stat">
+                                <dt>Posts today</dt>
+                                <dd>
+                                    96
+                                    <small>+12%</small>
+                                </dd>
+                            </dl>
+                        </article>
+                        <article class="panel">
+                            <dl class="stat">
+                                <dt>Open reports</dt>
+                                <dd>7</dd>
+                            </dl>
+                        </article>
+                        <article class="panel">
+                            <dl class="stat">
+                                <dt>Pending sign-ups</dt>
+                                <dd>14</dd>
+                            </dl>
+                        </article>
+                        <article class="panel">
+                            <dl class="stat">
+                                <dt>Open bounties</dt>
+                                <dd>31</dd>
+                            </dl>
+                        </article>
+                    </div>
+                    <div class="split">
+                        <article class="panel">
+                            <h3>Needs review</h3>
+                            <ul>
+                                <li>
+                                    <a href="#users">14 sign-ups waiting for approval</a>
+                                </li>
+                                <li>
+                                    <a href="#reports">7 reported posts and comments</a>
+                                </li>
+                                <li>
+                                    <a href="#showcase">Showcase submissions close in 5 days</a>
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="panel">
+                            <h3>Recent activity</h3>
+                            <ol class="timeline">
+                                <li>
+                                    <time datetime="2026-11-02T09:12">09:12</time>
+                                    Yueren S. solved bounty #184
+                                </li>
+                                <li>
+                                    <time datetime="2026-11-02T08:40">08:40</time>
+                                    Noshan O. posted in the tech feed
+                                </li>
+                                <li>
+                                    <time datetime="2026-11-02T08:05">08:05</time>
+                                    New alumni account registered
+                                </li>
+                            </ol>
+                        </article>
+                    </div>
+                </section>
+                <!-- MEMBERS -->
+                <section id="users" aria-labelledby="h-users">
+                    <header>
+                        <h2 id="h-users">Members</h2>
+                        <p>Approve, edit, suspend, or remove student and alumni accounts.</p>
+                    </header>
+                    <article class="panel">
+                        <form class="stack" style="grid-template-columns:2fr 1fr 1fr;align-items:end" aria-label="Filter members">
+                            <label>
+                                Find a member
+                                <input type="search" placeholder="Name or email" data-filter="#members-table">
+                            </label>
+                            <label>
+                                Status
+                                <select>
+                                    <option>All</option>
+                                    <option>Student</option>
+                                    <option>Alumni</option>
+                                </select>
+                            </label>
+                            <label>
+                                Account
+                                <select>
+                                    <option>All</option>
+                                    <option>Active</option>
+                                    <option>Pending</option>
+                                    <option>Suspended</option>
+                                </select>
+                            </label>
+                        </form>
+                    </article>
+                    <article class="panel scroll">
+                        <table id="members-table">
+                            <caption>All members</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Cohort</th>
+                                    <th scope="col">Account</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Denis</th>
+                                    <td>Denis@example.com</td>
+                                    <td>Alumna</td>
+                                    <td>Season 12</td>
+                                    <td>
+                                        <mark class="ok">Active</mark>
+                                    </td>
+                                    <td>
+                                        <button>View profile</button>
+                                        <button class="danger" data-act="Suspended">Suspend</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Faith</th>
+                                    <td>Faith@example.com</td>
+                                    <td>Student</td>
+                                    <td>Season 12</td>
+                                    <td>
+                                        <mark class="warn">Pending</mark>
+                                    </td>
+                                    <td>
+                                        <button class="primary" data-act="Active">Approve</button>
+                                        <button class="danger" data-act="Rejected">Reject</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Caroline</th>
+                                    <td>caroline@example.com</td>
+                                    <td>Student</td>
+                                    <td>Season 12</td>
+                                    <td>
+                                        <mark class="ok">Active</mark>
+                                    </td>
+                                    <td>
+                                        <button>View profile</button>
+                                        <button class="danger" data-act="Suspended">Suspend</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Jackie</th>
+                                    <td>Jackie@example.com</td>
+                                    <td>Alumnus</td>
+                                    <td>Season 12</td>
+                                    <td>
+                                        <mark class="bad">Suspended</mark>
+                                    </td>
+                                    <td>
+                                        <button data-act="Active">Reinstate</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                    <article class="panel">
+                        <h3>Add or edit a member</h3>
+                        <form class="stack">
+                            <fieldset>
+                                <legend>Profile</legend>
+                                <div class="split">
+                                    <label>
+                                        Full name
+                                        <input required="">
+                                    </label>
+                                    <label>
+                                        Email
+                                        <input type="email" required="">
+                                    </label>
+                                    <label>
+                                        Profile picture
+                                        <input type="file" accept="image/*">
+                                    </label>
+                                    <label>
+                                        Wecan cohort
+                                        <select>
+                                            <option>Season 1</option>
+                                            <option>Season 2</option>
+                                            <option>Season 3</option>
+                                            <option>Season 6</option>
+                                        </select>
+                                    </label>
+                                </div>
+                                <label>
+                                    Short bio
+                                    <textarea maxlength="300"></textarea>
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Type</legend>
+                                <label class="check">
+                                    <input type="radio" name="type" checked="">
+                                    Student
+                                </label>
+                                <label class="check">
+                                    <input type="radio" name="type">
+                                    Alumni
+                                </label>
+                            </fieldset>
+                            <div>
+                                <button class="primary" type="submit">Save member</button>
+                                <button type="reset">Clear</button>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+                <!-- COHORTS -->
+                <section id="cohorts" aria-labelledby="h-cohorts">
+                    <header>
+                        <h2 id="h-cohorts">Cohorts and seasons</h2>
+                        <p>Organize members by the Wecan season they joined.</p>
+                    </header>
+                    <article class="panel scroll">
+                        <table>
+                            <caption>Seasons</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Season</th>
+                                    <th scope="col">Members</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Season 6</th>
+                                    <td>42</td>
+                                    <td>
+                                        <mark class="ok">In session</mark>
+                                    </td>
+                                    <td>
+                                        <button>Edit</button>
+                                        <button>Move to alumni</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Season 3</th>
+                                    <td>38</td>
+                                    <td>
+                                        <mark>Graduated</mark>
+                                    </td>
+                                    <td>
+                                        <button>Edit</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                    <article class="panel">
+                        <h3>Create a season</h3>
+                        <form class="stack">
+                            <div class="split">
+                                <label>
+                                    Season name
+                                    <input>
+                                </label>
+                                <label>
+                                    Start date
+                                    <input type="date">
+                                </label>
+                                <label>
+                                    End date
+                                    <input type="date">
+                                </label>
+                            </div>
+                            <div>
+                                <button class="primary">Create season</button>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+                <!-- ROLES -->
+                <section id="roles" aria-labelledby="h-roles">
+                    <header>
+                        <h2 id="h-roles">Roles and permissions</h2>
+                        <p>Decide who can do what.</p>
+                    </header>
+                    <article class="panel scroll">
+                        <table>
+                            <caption>Permissions by role</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Permission</th>
+                                    <th scope="col">Member</th>
+                                    <th scope="col">Mentor</th>
+                                    <th scope="col">Moderator</th>
+                                    <th scope="col">Admin</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Create posts and comments</th>
+                                    <td>
+                                        <input type="checkbox" checked="" aria-label="Member can post">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" checked="" aria-label="Mentor can post">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" checked="" aria-label="Moderator can post">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" checked="" aria-label="Admin can post">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Post bounties</th>
+                                    <td>
+                                        <input type="checkbox" checked="" aria-label="Member can post bounties">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" checked="" aria-label="Mentor can post bounties">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" checked="" aria-label="Moderator can post bounties">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" checked="" aria-label="Admin can post bounties">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Remove content</th>
+                                    <td>
+                                        <input type="checkbox" aria-label="Member can remove content">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" aria-label="Mentor can remove content">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" aria-label="Moderator can remove content" checked="">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" aria-label="Admin can remove content" checked="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Suspend members</th>
+                                    <td>
+                                        <input type="checkbox" aria-label="Member can suspend">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" aria-label="Mentor can suspend">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" aria-label="Moderator can suspend" checked="">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" aria-label="Admin can suspend" checked="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Change settings</th>
+                                    <td>
+                                        <input type="checkbox" aria-label="Member can change settings">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" aria-label="Mentor can change settings">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" aria-label="Moderator can change settings">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" aria-label="Admin can change settings" checked="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>
+                            <button class="primary">Save permissions</button>
+                        </p>
+                    </article>
+                </section>
+                <!-- POSTS -->
+                <section id="posts" aria-labelledby="h-posts">
+                    <header>
+                        <h2 id="h-posts">Tech feed posts</h2>
+                        <p>Review, pin, hide, or delete posts.</p>
+                    </header>
+                    <article class="panel">
+                        <label>
+                            Find a post
+                            <input type="search" placeholder="Author or keyword" data-filter="#posts-table">
+                        </label>
+                    </article>
+                    <article class="panel scroll">
+                        <table id="posts-table">
+                            <caption>Latest posts</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Author</th>
+                                    <th scope="col">Post</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Posted</th>
+                                    <th scope="col">State</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Faith Njeri</th>
+                                    <td>How I fixed my CORS error</td>
+                                    <td>Learning</td>
+                                    <td>
+                                        <time datetime="2026-11-02">Today</time>
+                                    </td>
+                                    <td>
+                                        <mark class="ok">Visible</mark>
+                                    </td>
+                                    <td>
+                                        <button data-act="Pinned">Pin</button>
+                                        <button data-act="Hidden">Hide</button>
+                                        <button class="danger" data-act="Deleted">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Brian Otieno</th>
+                                    <td>Need help with SQL joins</td>
+                                    <td>Question</td>
+                                    <td>
+                                        <time datetime="2026-11-01">Yesterday</time>
+                                    </td>
+                                    <td>
+                                        <mark class="ok">Visible</mark>
+                                    </td>
+                                    <td>
+                                        <button data-act="Pinned">Pin</button>
+                                        <button data-act="Hidden">Hide</button>
+                                        <button class="danger" data-act="Deleted">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Joel Mwangi</th>
+                                    <td>Launched my inventory app</td>
+                                    <td>Project update</td>
+                                    <td>
+                                        <time datetime="2026-10-30">Fri</time>
+                                    </td>
+                                    <td>
+                                        <mark class="warn">Reported</mark>
+                                    </td>
+                                    <td>
+                                        <button data-act="Visible">Keep</button>
+                                        <button class="danger" data-act="Deleted">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </section>
+                <!-- COMMENTS -->
+                <section id="comments" aria-labelledby="h-comments">
+                    <header>
+                        <h2 id="h-comments">Comments</h2>
+                        <p>Keep technical discussions helpful and respectful.</p>
+                    </header>
+                    <article class="panel scroll">
+                        <table>
+                            <caption>Recent comments</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Author</th>
+                                    <th scope="col">Comment</th>
+                                    <th scope="col">On post</th>
+                                    <th scope="col">State</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Wanjiru Kamau</th>
+                                    <td>Try a LEFT JOIN here</td>
+                                    <td>Need help with SQL joins</td>
+                                    <td>
+                                        <mark class="ok">Visible</mark>
+                                    </td>
+                                    <td>
+                                        <button data-act="Hidden">Hide</button>
+                                        <button class="danger" data-act="Deleted">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Anonymous-ish</th>
+                                    <td>This is useless</td>
+                                    <td>How I fixed my CORS error</td>
+                                    <td>
+                                        <mark class="warn">Reported</mark>
+                                    </td>
+                                    <td>
+                                        <button data-act="Visible">Keep</button>
+                                        <button class="danger" data-act="Deleted">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </section>
+                <!-- REPORTS -->
+                <section id="reports" aria-labelledby="h-reports">
+                    <header>
+                        <h2 id="h-reports">Reports and moderation</h2>
+                        <p>Resolve what members have flagged.</p>
+                    </header>
+                    <article class="panel">
+                        <details open="">
+                            <summary>Post by Sasha Mumbi: reported for spam</summary>
+                            <p>
+                                Reported by Faith Njeri on
+                                <time datetime="2026-10-31">31 Oct</time>
+                                . Reason: promotional link.
+                            </p>
+                            <button data-act="Dismissed">Dismiss report</button>
+                            <button class="danger">Remove post</button>
+                            <button class="danger">Warn author</button>
+                        </details>
+                        <details>
+                            <summary>Comment by Anonymous-ish: reported for rudeness</summary>
+                            <p>
+                                Reported by Wanjiru Kamau on
+                                <time datetime="2026-11-01">1 Nov</time>
+                                .
+                            </p>
+                            <button>Dismiss report</button>
+                            <button class="danger">Remove comment</button>
+                            <button class="danger">Suspend author</button>
+                        </details>
+                    </article>
+                    <article class="panel">
+                        <h3>Moderation rules</h3>
+                        <form class="stack">
+                            <label class="check">
+                                <input type="checkbox" checked="">
+                                Hold first posts from new members for review
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" checked="">
+                                Hide content after 3 reports until reviewed
+                            </label>
+                            <label>
+                                Blocked words
+                                <textarea placeholder="One word or phrase per line"></textarea>
+                            </label>
+                            <div>
+                                <button class="primary">Save rules</button>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+                <!-- ANNOUNCEMENTS -->
+                <section id="announcements" aria-labelledby="h-ann">
+                    <header>
+                        <h2 id="h-ann">Announcements</h2>
+                        <p>Send news to everyone or to one group.</p>
+                    </header>
+                    <article class="panel">
+                        <form class="stack">
+                            <label>
+                                Title
+                                <input required="">
+                            </label>
+                            <label>
+                                Message
+                                <textarea required=""></textarea>
+                            </label>
+                            <div class="split">
+                                <label>
+                                    Send to
+                                    <select>
+                                        <option>Everyone</option>
+                                        <option>Students</option>
+                                        <option>Alumni</option>
+                                        <option>One season</option>
+                                    </select>
+                                </label>
+                                <label>
+                                    Send on
+                                    <input type="datetime-local">
+                                </label>
+                            </div>
+                            <label class="check">
+                                <input type="checkbox">
+                                Pin to top of the tech feed
+                            </label>
+                            <label class="check">
+                                <input type="checkbox">
+                                Also send by email
+                            </label>
+                            <div>
+                                <button class="primary">Publish announcement</button>
+                                <button type="button">Save draft</button>
+                            </div>
+                        </form>
+                    </article>
+                </section>
+                <!-- BOUNTIES -->
+                <section id="bounties" aria-labelledby="h-bounties">
+                    <header>
+                        <h2 id="h-bounties">Bounty board</h2>
+                        <p>Watch open problems and confirm solutions.</p>
+                    </header>
+                    <article class="panel scroll">
+                        <table>
+                            <caption>Bounties</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Problem</th>
+                                    <th scope="col">Topic</th>
+                                    <th scope="col">Posted by</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">#184</th>
+                                    <td>Fetch returns undefined in async loop</td>
+                                    <td>JavaScript</td>
+                                    <td>Brian Otieno</td>
+                                    <td>
+                                        <mark class="ok">Solved</mark>
+                                    </td>
+                                    <td>
+                                        <button>Verify solver</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">#191</th>
+                                    <td>Deploy fails on missing env variable</td>
+                                    <td>DevOps</td>
+                                    <td>Faith Njeri</td>
+                                    <td>
+                                        <mark class="warn">Open</mark>
+                                    </td>
+                                    <td>
+                                        <button data-act="Closed">Close</button>
+                                        <button class="danger" data-act="Deleted">Remove</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                    <article class="panel">
+                        <h3>Topics</h3>
+                        <p>JavaScript, Databases, APIs, DevOps, Deployment, UI/UX, Programming concepts, Software architecture</p>
+                        <form class="stack" style="grid-template-columns:1fr auto;align-items:end">
+                            <label>
+                                New topic
+                                <input>
+                            </label>
+                            <button class="primary">Add topic</button>
+                        </form>
+                    </article>
+                </section>
+                <!-- SHOWCASE -->
+                <section id="showcase" aria-labelledby="h-showcase">
+                    <header>
+                        <h2 id="h-showcase">Quarterly showcase</h2>
+                        <p>Run the voting arena every three months.</p>
+                    </header>
+                    <article class="panel">
+                        <h3>Current round: Q4 2026</h3>
+                        <p>Voting opens in 5 days.</p>
+                        <progress max="100" value="62" aria-label="Submission window used">62%</progress>
+                        <form class="stack" style="margin-top:1rem">
+                            <div class="split">
+                                <label>
+                                    Submissions close
+                                    <input type="date">
+                                </label>
+                                <label>
+                                    Voting ends
+                                    <input type="date">
+                                </label>
+                            </div>
+                            <div>
+                                <button class="primary">Update schedule</button>
+                            </div>
+                        </form>
+                    </article>
+                    <article class="panel scroll">
+                        <table>
+                            <caption>Submissions</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Project</th>
+                                    <th scope="col">Team</th>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Votes</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">StockSense</th>
+                                    <td>Joel Mwangi</td>
+                                    <td>Web app</td>
+                                    <td>0</td>
+                                    <td>
+                                        <mark class="warn">Awaiting review</mark>
+                                    </td>
+                                    <td>
+                                        <button class="primary" data-act="Approved">Approve</button>
+                                        <button data-act="Rejected">Reject</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">SafariQuest</th>
+                                    <td>Faith, Brian</td>
+                                    <td>Game</td>
+                                    <td>0</td>
+                                    <td>
+                                        <mark class="ok">Approved</mark>
+                                    </td>
+                                    <td>
+                                        <button>Preview</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                    <article class="panel">
+                        <h3>Hall of Fame</h3>
+                        <p>Declare a winner after voting closes. The member receives the Showcase Champion badge.</p>
+                        <button class="primary">Close voting and announce winner</button>
+                    </article>
+                </section>
+                <!-- RECOGNITION -->
+                <section id="recognition" aria-labelledby="h-rec">
+                    <header>
+                        <h2 id="h-rec">Badges and recognition</h2>
+                        <p>Reward contribution, not just points.</p>
+                    </header>
+                    <div class="split">
+                        <article class="panel scroll">
+                            <table>
+                                <caption>Achievement badges</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Badge</th>
+                                        <th scope="col">Earned by</th>
+                                        <th scope="col">Holders</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Builder</th>
+                                        <td>Shipping a significant project</td>
+                                        <td>112</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Problem Solver</th>
+                                        <td>Consistently solving bounties</td>
+                                        <td>64</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Community Mentor</th>
+                                        <td>Helping students grow</td>
+                                        <td>27</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Consistent Shipper</th>
+                                        <td>Sustained shipping history</td>
+                                        <td>35</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Open Source Contributor</th>
+                                        <td>Meaningful open-source work</td>
+                                        <td>19</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Showcase Champion</th>
+                                        <td>Winning a showcase</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                        <article class="panel">
+                            <h3>Give a badge or recognition</h3>
+                            <form class="stack">
+                                <label>
+                                    Member
+                                    <input placeholder="Search by name">
+                                </label>
+                                <label>
+                                    Award
+                                    <select>
+                                        <option>Builder</option>
+                                        <option>Problem Solver</option>
+                                        <option>Community Mentor</option>
+                                        <option>Consistent Shipper</option>
+                                        <option>Open Source Contributor</option>
+                                        <option>Showcase Champion</option>
+                                        <option>Community Helper</option>
+                                        <option>Innovator</option>
+                                        <option>Rising Builder</option>
+                                        <option>Hall of Fame</option>
+                                    </select>
+                                </label>
+                                <label>
+                                    Reason
+                                    <textarea></textarea>
+                                </label>
+                                <div>
+                                    <button class="primary">Give award</button>
+                                </div>
+                            </form>
+                        </article>
+                    </div>
+                </section>
+                <!-- ANALYTICS -->
+                <section id="analytics" aria-labelledby="h-analytics">
+                    <header>
+                        <h2 id="h-analytics">Analytics</h2>
+                        <p>How the community is growing.</p>
+                    </header>
+                    <div class="split">
+                        <article class="panel">
+                            <h3>Engagement</h3>
+                            <label>
+                                Members active this month
+                                <meter min="0" max="100" value="74" low="40" high="70" optimum="90">74%</meter>
+                            </label>
+                            <label>
+                                Posts with at least one comment
+                                <meter min="0" max="100" value="58" low="40" high="70" optimum="90">58%</meter>
+                            </label>
+                            <label>
+                                Bounties solved
+                                <meter min="0" max="100" value="81" low="40" high="70" optimum="90">81%</meter>
+                            </label>
+                        </article>
+                    </div>
+                    <p>
+                        <button>Export report</button>
+                    </p>
+                </section>
+                <!-- AUDIT -->
+                <section id="audit" aria-labelledby="h-audit">
+                    <header>
+                        <h2 id="h-audit">Audit log</h2>
+                        <p>A permanent record of admin actions.</p>
+                    </header>
+                    <article class="panel scroll">
+                        <table>
+                            <caption>Recent actions</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">When</th>
+                                    <th scope="col">Admin</th>
+                                    <th scope="col">Action</th>
+                                    <th scope="col">Target</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-11-02T09:30">Today 09:30</time>
+                                    </td>
+                                    <td>Shaniz</td>
+                                    <td>Suspended member</td>
+                                    <td>Nyakito Noah</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-11-01T16:10">Yesterday 16:10</time>
+                                    </td>
+                                    <td>Tracey</td>
+                                    <td>Removed comment</td>
+                                    <td>Comment on post 412</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-10-31T11:00">31 Oct 11:00</time>
+                                    </td>
+                                    <td>Diana</td>
+                                    <td>Awarded badge</td>
+                                    <td>Wasela Chris: Problem Solver</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </section>
+                <!-- SETTINGS -->
+                <section id="settings" aria-labelledby="h-settings">
+                    <header>
+                        <h2 id="h-settings">Settings</h2>
+                        <p>Platform-wide configuration.</p>
+                    </header>
+                    <form class="stack">
+                        <fieldset>
+                            <legend>General</legend>
+                            <div class="split">
+                                <label>
+                                    Platform name
+                                    <input value="WeCan Connect">
+                                </label>
+                                <label>
+                                    Support email
+                                    <input type="email" placeholder="support@example.com">
+                                </label>
+                                <label>
+                                    Logo
+                                    <input type="file" accept="image/*">
+                                </label>
+                                <label>
+                                    Time zone
+                                    <select>
+                                        <option>Africa/Nairobi</option>
+                                        <option>UTC</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Registration and login</legend>
+                            <label class="check">
+                                <input type="checkbox" checked="">
+                                Approve new sign-ups manually
+                            </label>
+                            <label class="check">
+                                <input type="checkbox">
+                                Allow only Wecan email addresses
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" checked="">
+                                Require strong passwords
+                            </label>
+                            <label>
+                                Sign out inactive members after (minutes)
+                                <input type="number" value="60" min="5">
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Features</legend>
+                            <label class="check">
+                                <input type="checkbox" checked="">
+                                Tech feed
+                            </label>
+                            <label class="check">
+                                <input type="checkbox" checked="">
+                                Comments
+                            </label>
+                            <label class="check">
+                                <input type="checkbox">
+                                Likes and kudos
+                            </label>
+                            <label class="check">
+                                <input type="checkbox">
+                                Bounty board
+                            </label>
+                            <label class="check">
+                                <input type="checkbox">
+                                Quarterly showcase
+                            </label>
+                            <label class="check">
+                                <input type="checkbox">
+                                Private messaging
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Notifications</legend>
+                            <label class="check">
+                                <input type="checkbox" checked="">
+                                Email admins about new reports
+                            </label>
+                            <label class="check">
+                                <input type="checkbox">
+                                Email admins about new sign-ups
+                            </label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Data</legend>
+                            <button type="button">Back up database</button>
+                            <button type="button">Export members</button>
+                            <button type="button" class="danger">Enter maintenance mode</button>
+                        </fieldset>
+                        <div>
+                            <button class="primary" type="submit">Save settings</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+        <footer>WeCan Connect admin panel</footer>
+    </body>
+</html>
