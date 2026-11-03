@@ -46,8 +46,8 @@
                     placeholder="GitHub repository link (optional)"
                 >
 
+                <label for="post-image">Attach an image (optional):</label>
                 <input type="file" id="post-image" accept="image/*">
-
                 <button type="submit">Publish Post</button>
             </form>
         </section>
@@ -61,10 +61,48 @@
                 <button type="button" data-category="code">Code Snippets</button>
                 <button type="button" data-category="project">Project Updates</button>
             </div>
+        
+<div id="posts-container">
 
-            <div id="posts-container">
-                <!-- Posts will appear here -->
-            </div>
+    <article class="post-card">
+        <p>Project Update</p>
+        <div class="post-author">
+            <h3>Daisy Awuor</h3>
+            <p> Computer Programming Student | Season 12</p>
+            <time datetime="2026-11-03">November 3, 2026</time>
+        </div>
+
+        <div class="post-content">
+            <p>
+        I'm currently working on the WeCan Connect project,
+        where I'm developing the Tech Feed page using HTML.
+        The goal is to create a space where members can share
+        updates, learning experiences and project progress.
+        Excited to be part of building this platform!
+            </p>
+            <p>
+        <a href="https://github.com/iyf-s12-WeCanConnect-team-Nyakito">View the project on GitHub</a>
+    </p>
+        </div>
+        <div class="post-actions">
+    <button type="button">Like</button>
+    <button type="button">Comment</button>
+</div>
+
+<div class="post-comments">
+    <h4>Comments</h4>
+
+    <form>
+        <textarea placeholder="Write a comment..."></textarea>
+        <button type="submit">Post Comment</button>
+    </form>
+</div>
+
+    </article>
+    
+
+</div>
+
         </section>
 
     </main>
