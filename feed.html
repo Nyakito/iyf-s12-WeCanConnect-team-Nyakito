@@ -1,1 +1,74 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Feed | WeCan Connect</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>WeCan Connect</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="feed.html">Tech Feed</a>
+            <a href="bounties.html">Bounties</a>
+            <a href="showcase.html">Showcase</a>
+            <a href="mentorship.html">Mentorship</a>
+            <a href="profile.html">My Profile</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="post-composer">
+            <h2>Share with the Community</h2>
+
+            <form id="post-form">
+                <textarea
+                    id="post-content"
+                    placeholder="What's on your mind?"
+                    required
+                ></textarea>
+
+                <select id="post-category" required>
+                    <option value="">Choose a category</option>
+                    <option value="learning">Learning Log</option>
+                    <option value="code">Code Snippet</option>
+                    <option value="project">Project Update</option>
+                </select>
+
+                <input
+                    type="url"
+                    id="github-link"
+                    placeholder="GitHub repository link (optional)"
+                >
+
+                <input type="file" id="post-image" accept="image/*">
+
+                <button type="submit">Publish Post</button>
+            </form>
+        </section>
+
+        <section id="community-feed">
+            <h2>Community Updates</h2>
+
+            <div id="feed-filters">
+                <button type="button" data-category="all">All Posts</button>
+                <button type="button" data-category="learning">Learning Logs</button>
+                <button type="button" data-category="code">Code Snippets</button>
+                <button type="button" data-category="project">Project Updates</button>
+            </div>
+
+            <div id="posts-container">
+                <!-- Posts will appear here -->
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
+
