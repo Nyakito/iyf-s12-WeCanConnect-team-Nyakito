@@ -1,86 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Member profile on WeCan Connect.">
+
+    <meta
+        name="description"
+        content="View a WeCan Connect member profile: skills, badges, projects and community contributions."
+    >
     <title>Profile | WeCan Connect</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Shared stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
+
+    <!-- Skip link for keyboard and screen-reader users -->
     <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <header class="site-header">
+    <!-- HEADER & NAVIGATION (same links on every authenticated page) -->
+    <header>
+
         <nav aria-label="Main navigation">
-            <a href="index.html" class="logo">WeCan Connect</a>
-            <button type="button" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+
+            <a href="dashboard.html" class="logo">
+                WeCan Connect
+            </a>
+
+            <button
+                type="button"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+                Menu
+            </button>
+
             <ul id="primary-navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="feed.html">Tech Feed</a></li>
-                <li><a href="bounties.html">Bounties</a></li>
-                <li><a href="showcase.html">Showcase</a></li>
-                <li><a href="mentorship.html">Mentorship</a></li>
-                <li><a href="profile.html" aria-current="page">Profile</a></li>
-                <li><a href="admin.html">Admin</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="login.html#sign-up">Join Community</a></li>
+
+                <li>
+                    <a href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li>
+                    <a href="feed.html">Tech Feed</a>
+                </li>
+
+                <li>
+                    <a href="bounties.html">Bounties</a>
+                </li>
+
+                <li>
+                    <a href="showcase.html">Showcase</a>
+                </li>
+
+                <li>
+                    <a href="mentorship.html">Mentorship</a>
+                </li>
+
+                <li>
+                    <a href="profile.html" id="my-profile-link" aria-current="page">My Profile</a>
+                </li>
+
+                <!-- Shown by JavaScript for admins only (convenience, not security) -->
+                <li id="admin-link-item" hidden>
+                    <a href="admin.html">Admin</a>
+                </li>
+
+                <li>
+                    <button type="button" id="logout-button" class="btn btn-secondary">Log out</button>
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
 
+
+    <!-- MAIN CONTENT -->
     <main id="main-content">
-        <h1>Tracey</h1>
-        <p>Learner, Cohort 3</p>
-        <p>This is the signed-in member profile used across the dashboard, feed, and bounty board.</p>
 
-        <section aria-labelledby="profile-stats-heading">
-            <h2 id="profile-stats-heading">Contributions</h2>
-            <ul>
-                <li>Contributions: 12</li>
-                <li>Bounties solved: 8</li>
-                <li>Projects: 4</li>
-            </ul>
-        </section>
+        <!-- Message shown if the profile ID in the address is not found -->
+        <p id="profile-message" role="status" hidden></p>
 
-        <section aria-labelledby="profile-links-heading">
-            <h2 id="profile-links-heading">Community</h2>
-            <ul>
-                <li><a href="dashboard.html">Back to the dashboard</a></li>
-                <li><a href="feed.html">Tech Feed</a></li>
-                <li><a href="bounties.html">Bounties</a></li>
-                <li><a href="showcase.html">Showcase</a></li>
-            </ul>
-        </section>
+        <div id="profile-content">
+
+            <!-- PROFILE HEADER -->
+            <section id="profile-header" aria-labelledby="profile-name">
+
+                <div class="avatar" id="profile-avatar">
+                    <!-- JavaScript adds initials, or an <img> if the member has a picture -->
+                    <span id="profile-initials" aria-hidden="true"></span>
+                    <img id="profile-image" src="" alt="" hidden>
+                </div>
+
+                <div class="profile-summary">
+
+                    <h1 id="profile-name"></h1>
+
+                    <p>
+                        <span id="profile-role"></span>
+                        &bull;
+                        Cohort <span id="profile-cohort"></span>
+                    </p>
+
+                    <p>
+                        Career status:
+                        <span id="profile-career"></span>
+                    </p>
+
+                    <p id="profile-bio"></p>
+
+                    <!-- Visible to the profile owner only -->
+                    <button type="button" id="edit-profile-button" class="btn btn-primary" hidden>
+                        Edit Profile
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- QUICK STATISTICS -->
+            <section id="profile-stats" aria-labelledby="stats-heading">
+
+                <h2 id="stats-heading">Summary</h2>
+
+                <ul class="stats-list">
+
+                    <li class="card">
+                        <span class="stat-number" id="stat-projects">0</span>
+                        <span class="stat-label">Projects</span>
+                    </li>
+
+                    <li class="card">
+                        <span class="stat-number" id="stat-bounties">0</span>
+                        <span class="stat-label">Bounties</span>
+                    </li>
+
+                    <li class="card">
+                        <span class="stat-number" id="stat-contributions">0</span>
+                        <span class="stat-label">Contributions</span>
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- SKILLS, TECHNOLOGY STACK AND LINKS -->
+            <section id="profile-skills" aria-labelledby="skills-heading">
+
+                <h2 id="skills-heading">Skills and Links</h2>
+
+                <ul id="skills-list" class="tag-list">
+                    <!-- JavaScript renders one <li> per skill -->
+                </ul>
+
+                <p id="skills-empty" hidden>No skills added yet.</p>
+
+                <ul class="link-list">
+
+                    <li id="github-item" hidden>
+                        <a id="github-link" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </li>
+
+                    <li id="portfolio-item" hidden>
+                        <a id="portfolio-link" href="#" target="_blank" rel="noopener noreferrer">Portfolio</a>
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- BADGES AND RECOGNITION -->
+            <section id="profile-badges" aria-labelledby="badges-heading">
+
+                <h2 id="badges-heading">Badges and Recognition</h2>
+
+                <ul id="badges-list" class="badge-list">
+                    <!-- JavaScript renders one <li class="badge"> per badge -->
+                </ul>
+
+                <p id="badges-empty" hidden>
+                    No badges yet. Solve a bounty or share a project to earn one.
+                </p>
+
+            </section>
+
+
+            <!-- PROJECT LIST -->
+            <section id="profile-projects" aria-labelledby="projects-heading">
+
+                <h2 id="projects-heading">Projects</h2>
+
+                <div id="projects-list" class="features-container">
+                    <!-- JavaScript renders one <article class="card"> per project -->
+                </div>
+
+                <p id="projects-empty" hidden>No projects yet.</p>
+
+            </section>
+
+
+            <!-- CONTRIBUTION TIMELINE -->
+            <section id="profile-timeline" aria-labelledby="timeline-heading">
+
+                <h2 id="timeline-heading">Contribution Timeline</h2>
+
+                <ol id="timeline-list" class="timeline">
+                    <!-- JavaScript renders one <li> per contribution (post, bounty or project), newest first -->
+                </ol>
+
+                <p id="timeline-empty" hidden>No contributions yet.</p>
+
+            </section>
+
+        </div>
+
     </main>
 
-    <footer class="site-footer">
-        <section aria-labelledby="contact-heading">
-            <h2 id="contact-heading">Get in Touch</h2>
-            <address>
-                <p>Phone: <a href="tel:+254708333444">0708 333 444</a></p>
-                <p>Other line: <a href="tel:+254704333111">0704 333 111</a></p>
-                <p>Location: WeCan Academy / IYF Headquarters, Kenya</p>
-            </address>
-        </section>
-        <nav aria-label="Footer navigation">
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="feed.html">Tech Feed</a></li>
-                <li><a href="bounties.html">Bounties</a></li>
-                <li><a href="showcase.html">Showcase</a></li>
-                <li><a href="mentorship.html">Mentorship</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="admin.html">Admin</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="login.html#sign-up">Join Community</a></li>
-            </ul>
-        </nav>
-        <p class="footer-bottom">&copy; 2026 WeCan Connect. All rights reserved.</p>
+
+    <!-- EDIT PROFILE DIALOG (opened by JavaScript for the owner only) -->
+    <dialog id="edit-profile-dialog" aria-labelledby="edit-heading">
+
+        <form id="edit-profile-form" method="dialog">
+
+            <h2 id="edit-heading">Edit Your Profile</h2>
+
+            <label for="edit-bio">Short bio</label>
+            <textarea id="edit-bio" name="bio" rows="4" maxlength="300"></textarea>
+
+            <label for="edit-career">Career status</label>
+            <input type="text" id="edit-career" name="careerStatus" maxlength="60">
+
+            <label for="edit-skills">Skills (separate with commas)</label>
+            <input type="text" id="edit-skills" name="skills">
+
+            <label for="edit-github">GitHub link</label>
+            <input type="url" id="edit-github" name="githubUrl" placeholder="https://github.com/your-name">
+
+            <label for="edit-portfolio">Portfolio link</label>
+            <input type="url" id="edit-portfolio" name="portfolioUrl" placeholder="https://your-site.com">
+
+            <p id="edit-error" role="alert" hidden></p>
+
+            <div class="form-actions">
+
+                <button type="button" id="cancel-edit-button" class="btn btn-secondary">
+                    Cancel
+                </button>
+
+                <button type="submit" class="btn btn-primary">
+                    Save Changes
+                </button>
+
+            </div>
+
+        </form>
+
+    </dialog>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 WeCan Connect.
+                All rights reserved.
+            </p>
+
+        </div>
+
     </footer>
-    <script src="nav.js"></script>
+
+    <!-- Page script: js/modules/profiles.js imports the shared core modules -->
+    <script type="module" src="js/modules/profiles.js"></script>
+
 </body>
+
 </html>
+
