@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Feed | WeCan Connect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="site-header">
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="logo">WeCan Connect</a>
+            <button type="button" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+            <ul id="primary-navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="feed.html" aria-current="page">Tech Feed</a></li>
+                <li><a href="bounties.html">Bounties</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html#sign-up">Join Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="post-composer" aria-labelledby="composer-heading">
+            <h1 id="composer-heading">Share with the Community</h1>
+
+            <form id="post-form">
+                <label for="post-content">Update</label>
+                <textarea id="post-content" name="content" placeholder="What's on your mind?" required></textarea>
+
+                <label for="post-category">Category</label>
+                <select id="post-category" name="category" required>
+                    <option value="">Choose a category</option>
+                    <option value="learning">Learning Log</option>
+                    <option value="code">Code Snippet</option>
+                    <option value="project">Project Update</option>
+                </select>
+
+                <label for="github-link">GitHub repository link (optional)</label>
+                <input type="url" id="github-link" name="github" placeholder="https://github.com/username/repo">
+
+                <label for="post-image">Attach an image (optional)</label>
+                <input type="file" id="post-image" name="image" accept="image/*">
+
+                <button type="submit">Publish Post</button>
+            </form>
+        </section>
+
+        <section id="community-feed" aria-labelledby="feed-heading">
+            <h2 id="feed-heading">Community Updates</h2>
+
+            <div id="feed-filters">
+                <button type="button" data-category="all">All Posts</button>
+                <button type="button" data-category="learning">Learning Logs</button>
+                <button type="button" data-category="code">Code Snippets</button>
+                <button type="button" data-category="project">Project Updates</button>
+            </div>
+
+            <div id="posts-container">
+                <article class="post-card">
+                    <p>Project Update</p>
+                    <div class="post-author">
+                        <h3>Daisy Awuor</h3>
+                        <p>Computer Programming Student | Season 12</p>
+                        <time datetime="2026-11-03">November 3, 2026</time>
+                    </div>
+                    <div class="post-content">
+                        <p>
+                            I'm currently working on the WeCan Connect project,
+                            where I'm developing the Tech Feed page using HTML.
+                            The goal is to create a space where members can share
+                            updates, learning experiences and project progress.
+                            Excited to be part of building this platform!
+                        </p>
+                        <p>
+                            <a href="https://github.com/iyf-s12-WeCanConnect-team-Nyakito">View the project on GitHub</a>
+                        </p>
+                    </div>
+                    <div class="post-actions">
+                        <button type="button">Like</button>
+                        <button type="button">Comment</button>
+                    </div>
+                    <div class="post-comments">
+                        <h4>Comments</h4>
+                        <form>
+                            <label for="comment-text">Write a comment</label>
+                            <textarea id="comment-text" name="comment" placeholder="Write a comment..."></textarea>
+                            <button type="submit">Post Comment</button>
+                        </form>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <section aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Get in Touch</h2>
+            <address>
+                <p>Phone: <a href="tel:+254708333444">0708 333 444</a></p>
+                <p>Other line: <a href="tel:+254704333111">0704 333 111</a></p>
+                <p>Location: WeCan Academy / IYF Headquarters, Kenya</p>
+            </address>
+        </section>
+        <nav aria-label="Footer navigation">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="feed.html">Tech Feed</a></li>
+                <li><a href="bounties.html">Bounties</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html#sign-up">Join Community</a></li>
+            </ul>
+        </nav>
+        <p class="footer-bottom">&copy; 2026 WeCan Connect. All rights reserved.</p>
+    </footer>
+    <script src="nav.js"></script>
+</body>
+</html>
