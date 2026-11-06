@@ -4,27 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Showcase| WeCan Connect</title>
+    <title>Project Showcase | WeCan Connect</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <!-- Header -->
-    <header>
-        <h1>WeCan Connect</h1>
-        <p>Discover, share and celebrate community projects.</p>
-
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="showcase.html">Project Showcase</a>
+    <header class="site-header">
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="logo">WeCan Connect</a>
+            <button type="button" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+            <ul id="primary-navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="feed.html">Tech Feed</a></li>
+                <li><a href="bounties.html">Bounties</a></li>
+                <li><a href="showcase.html" aria-current="page">Showcase</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html#sign-up">Join Community</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
 
         <!-- Introduction -->
         <section>
-            <h2>Project Showcase</h2>
+            <h1>Project Showcase</h1>
+            <p>Discover, share and celebrate community projects.</p>
             <p>
                 Explore projects created by members of our community.
                 Share your work, receive feedback and support other creators.
@@ -81,13 +91,12 @@
                     flood-related information and alerts.
                 </p>
                 <p><strong>Owner:</strong> Project Member</p>
-                <img src="images/flood-navi.jpg"
+                <img src="images/flood-navi.svg"
                      alt="Flood Navi project screenshot"
                      width="300">
 
                 <p>
-                    <a href="#">GitHub Repository</a>
-                    <a href="#">Live Demo</a>
+                    <a href="https://github.com/iyf-s12-WeCanConnect-team-Nyakito">GitHub repository</a>
                 </p>
             </article>
         </section>
@@ -99,7 +108,7 @@
             <article>
                 <h3>Flood Navi</h3>
 
-                <img src="images/flood-navi.jpg"
+                <img src="images/flood-navi.svg"
                      alt="Screenshot of Flood Navi"
                      width="300">
 
@@ -112,8 +121,7 @@
                 <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
 
                 <p>
-                    <a href="#">View GitHub Project</a>
-                    <a href="#">View Live Demo</a>
+                    <a href="https://github.com/iyf-s12-WeCanConnect-team-Nyakito">View GitHub project</a>
                 </p>
 
                 <p><a href="#feedback">Give Feedback</a></p>
@@ -123,7 +131,7 @@
             <article>
                 <h3>Student Portfolio</h3>
 
-                <img src="images/portfolio.jpg"
+                <img src="images/portfolio.svg"
                      alt="Screenshot of Student Portfolio"
                      width="300">
 
@@ -136,8 +144,7 @@
                 <p><strong>Technologies:</strong> HTML and CSS</p>
 
                 <p>
-                    <a href="#">View GitHub Project</a>
-                    <a href="#">View Live Demo</a>
+                    <a href="https://github.com/iyf-s12-WeCanConnect-team-Nyakito">View GitHub project</a>
                 </p>
 
                 <p><a href="#feedback">Give Feedback</a></p>
@@ -152,7 +159,7 @@
             <article>
                 <h3>Flood Navi - Project Information</h3>
 
-                <img src="images/flood-navi.jpg"
+                <img src="images/flood-navi.svg"
                      alt="Flood Navi project preview"
                      width="400">
 
@@ -167,11 +174,7 @@
                 <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
 
                 <p>
-                    <a href="#">GitHub Repository</a>
-                </p>
-
-                <p>
-                    <a href="#">Live Demo</a>
+                    <a href="https://github.com/iyf-s12-WeCanConnect-team-Nyakito">GitHub repository</a>
                 </p>
             </article>
         </section>
@@ -301,11 +304,34 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 WeCan Connect. All rights reserved.</p>
+    <footer class="site-footer">
+        <section aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Get in Touch</h2>
+            <address>
+                <p>Phone: <a href="tel:+254708333444">0708 333 444</a></p>
+                <p>Other line: <a href="tel:+254704333111">0704 333 111</a></p>
+                <p>Location: WeCan Academy / IYF Headquarters, Kenya</p>
+            </address>
+        </section>
+        <nav aria-label="Footer navigation">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="feed.html">Tech Feed</a></li>
+                <li><a href="bounties.html">Bounties</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html#sign-up">Join Community</a></li>
+            </ul>
+        </nav>
+        <p class="footer-bottom">&copy; 2026 WeCan Connect. All rights reserved.</p>
     </footer>
-
+    <script src="nav.js"></script>
 </body>
 </html>
 

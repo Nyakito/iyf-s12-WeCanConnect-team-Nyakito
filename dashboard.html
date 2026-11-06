@@ -1,68 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard – WeCan</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | WeCan Connect</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="layout">
-    <aside class="sidebar">
-      <div class="brand">WeCan</div>
-      <nav aria-label="Main navigation">
-        <a href="dashboard.html" aria-current="page">Dashboard</a>
-        <a href="feed.html">Feed</a>
-        <a href="bounties.html">Bounties</a>
-        <a href="showcase.html">Showcase</a>
-        <a href="mentorship.html">Mentorship</a>
-        <a href="profile.html">My Profile</a>
-      </nav>
-    </aside>
+    <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <main>
-      <h1 id="welcome">Welcome back, Tracey</h1>
-      <p class="subtitle">
-        <span class="badge" id="role">Learner</span>
-        <span id="cohort">Cohort 3</span>
-      </p>
+    <header class="site-header">
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="logo">WeCan Connect</a>
+            <button type="button" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+            <ul id="primary-navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+                <li><a href="feed.html">Tech Feed</a></li>
+                <li><a href="bounties.html">Bounties</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html#sign-up">Join Community</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <section aria-labelledby="stats-heading">
-        <h2 id="stats-heading">Your stats</h2>
-        <div class="stats">
-          <div class="stat">
-            <div class="label">Contributions</div>
-            <div class="value" id="stat-contributions">12</div>
-          </div>
-          <div class="stat">
-            <div class="label">Bounties solved</div>
-            <div class="value" id="stat-bounties">8</div>
-          </div>
-          <div class="stat">
-            <div class="label">Projects</div>
-            <div class="value" id="stat-projects">4</div>
-          </div>
-        </div>
-      </section>
+    <main id="main-content">
+        <h1 id="welcome">Welcome back, Tracey</h1>
+        <p class="subtitle">
+            <span class="badge" id="role">Learner</span>
+            <span id="cohort">Cohort 3</span>
+        </p>
 
-      <section aria-labelledby="activity-heading">
-        <h2 id="activity-heading">Recent community activity</h2>
-        <ul class="activity" id="activity">
-          <li>Member shared a learning update</li>
-          <li>New project submitted to Showcase</li>
-          <li>A JavaScript bounty was claimed</li>
-        </ul>
-      </section>
+        <section aria-labelledby="stats-heading">
+            <h2 id="stats-heading">Your stats</h2>
+            <div class="stats">
+                <div class="stat">
+                    <div class="label">Contributions</div>
+                    <div class="value" id="stat-contributions">12</div>
+                </div>
+                <div class="stat">
+                    <div class="label">Bounties solved</div>
+                    <div class="value" id="stat-bounties">8</div>
+                </div>
+                <div class="stat">
+                    <div class="label">Projects</div>
+                    <div class="value" id="stat-projects">4</div>
+                </div>
+            </div>
+        </section>
 
-      <section aria-labelledby="actions-heading">
-        <h2 id="actions-heading">What would you like to do?</h2>
-        <div class="actions">
-          <a class="btn" href="feed.html">Post an update</a>
-          <a class="btn" href="bounties.html">Explore bounties</a>
-          <a class="btn" href="showcase.html">Submit a project</a>
-          <a class="btn secondary" href="mentorship.html">Find a mentor</a>
-        </div>
-      </section>
+        <section aria-labelledby="activity-heading">
+            <h2 id="activity-heading">Recent community activity</h2>
+            <ul class="activity" id="activity">
+                <li>Member shared a learning update</li>
+                <li>New project submitted to Showcase</li>
+                <li>A JavaScript bounty was claimed</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="actions-heading">
+            <h2 id="actions-heading">What would you like to do?</h2>
+            <div class="actions">
+                <a class="btn" href="feed.html">Post an update</a>
+                <a class="btn" href="bounties.html">Explore bounties</a>
+                <a class="btn" href="showcase.html#submit-project">Submit a project</a>
+                <a class="btn secondary" href="mentorship.html">Find a mentor</a>
+                <a class="btn secondary" href="profile.html">View profile</a>
+            </div>
+        </section>
     </main>
-  </div>
+
+    <footer class="site-footer">
+        <section aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Get in Touch</h2>
+            <address>
+                <p>Phone: <a href="tel:+254708333444">0708 333 444</a></p>
+                <p>Other line: <a href="tel:+254704333111">0704 333 111</a></p>
+                <p>Location: WeCan Academy / IYF Headquarters, Kenya</p>
+            </address>
+        </section>
+        <nav aria-label="Footer navigation">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="feed.html">Tech Feed</a></li>
+                <li><a href="bounties.html">Bounties</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html#sign-up">Join Community</a></li>
+            </ul>
+        </nav>
+        <p class="footer-bottom">&copy; 2026 WeCan Connect. All rights reserved.</p>
+    </footer>
+    <script src="nav.js"></script>
 </body>
 </html>
