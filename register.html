@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Join WeCan Connect, the learning and collaboration community for WeCan Academy students and alumni.">
+
+    <meta name="author" content="WeCan Connect">
+
+    <title>Create Account | WeCan Connect</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <a href="index.html" class="logo">WeCan Connect </a>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="register-container">
+
+        <!-- WELCOME SECTION -->
+        <section class="welcome-section" aria-labelledby="welcome-heading">
+
+            <p class="eyebrow">YOUR COMMUNITY. YOUR JOURNEY.</p>
+
+            <h1 id="welcome-heading">
+                Learn. Connect. Build. Grow.
+            </h1>
+
+            <p>
+                WeCan Connect brings students and alumni together
+                to share knowledge, collaborate on projects,
+                solve problems and grow beyond the classroom.
+            </p>
+
+            <img src="images/wecan-community (5) (1).jpg"  alt="WeCan Connect students collaborating around a laptop"  class="hero-image">
+
+
+            <ul class="welcome-points">
+                <li>Connect with fellow learners and alumni.</li>
+                <li>Share ideas and learning experiences.</li>
+                <li>Collaborate on meaningful projects.</li>
+                <li>Learn from a supportive community.</li>
+            </ul>
+
+        </section>
+
+
+        <!-- REGISTRATION SECTION -->
+        <section class="form-section" aria-labelledby="register-heading">
+
+            <header class="form-heading">
+
+                <h2 id="register-heading">Join the Community</h2>
+
+                <p>
+                    Create your account to get started.
+                </p>
+
+            </header>
+
+
+            <!-- REGISTRATION FORM -->
+            <form id="registerForm" action="#" method="post">
+
+                <!-- PERSONAL INFORMATION -->
+                <fieldset>
+
+                    <legend>Personal Information</legend>
+
+                    <p class="form-group">
+
+                        <label for="fullName">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </p>
+
+
+                    <p class="form-group">
+
+                        <label for="email">Email Address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </p>
+
+
+                    <p class="form-group">
+
+                        <label for="username">Username</label>
+<input type="text" id="username" name="username" required
+       minlength="3" maxlength="20" pattern="[A-Za-z0-9_]+"
+       autocomplete="username" aria-describedby="username-help">
+<small id="username-help">3-20 characters: letters, numbers and underscores only.</small>
+
+                    </p>
+
+                </fieldset>
+
+
+                <!-- COMMUNITY MEMBERSHIP -->
+                <fieldset>
+
+                    <legend>Community Membership</legend>
+
+                    <p class="form-group">
+
+                        <label for="role">Membership Type</label>
+
+                        <select id="role" name="role" required>
+
+                            <option value="">Select your membership type</option>
+
+                            <option value="student">Student</option>
+
+                            <option value="alumnus">Alumnus</option>
+
+                        </select>
+
+                        <small>
+                            Student: Currently enrolled at WeCan Academy.
+                            Alumnus: A graduate of WeCan Academy.
+                        </small>
+
+                    </p>
+
+
+                    <p class="form-group">
+
+                        <label for="cohort">Cohort / Season</label>
+
+                        <input
+                            type="text"
+                            id="cohort"
+                            name="cohort"
+                            placeholder="e.g. Season 12"
+                        >
+
+                    </p>
+
+                </fieldset>
+
+
+                <!-- ACCOUNT SECURITY -->
+                <fieldset>
+
+                    <legend>Account Security</legend>
+
+                    <p class="form-group">
+
+                        <label for="password">Password</label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            minlength="8"
+                            autocomplete="new-password"
+                            aria-describedby="password-help"
+                            required
+                        >
+
+                        <small id="password-help">
+                            Your password must contain at least 8 characters.
+                        </small>
+
+                    </p>
+
+
+                    <p class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Enter your password again"
+                            autocomplete="new-password"
+                            required
+                        >
+
+                    </p>
+
+
+                    <p class="form-group password-toggle">
+
+                        <input
+                            type="checkbox"
+                            id="showPassword"
+                        >
+
+                        <label for="showPassword">
+                            Show password
+                        </label>
+
+                    </p>
+
+                </fieldset>
+
+
+                <!-- TERMS AND PRIVACY -->
+                <section class="terms-group" aria-label="Terms and privacy agreement">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        name="terms"
+                        required
+                    >
+
+                    <label for="terms">
+                        I agree to the
+                        <a href="terms.html">Terms and Conditions</a>
+                        and acknowledge the
+                        <a href="privacy.html">Privacy Policy</a>.
+                    </label>
+
+                </section>
+
+
+                <!-- FORM FEEDBACK -->
+                <p
+                    id="formMessage"
+                    role="alert"
+                    aria-live="polite"
+                ></p>
+
+
+                <!-- SUBMIT BUTTON -->
+                 <p id="form-message" role="alert" aria-live="polite"></p>
+                <button type="submit" class="submit-btn">
+                    Create Account
+                </button>
+
+
+                <!-- LOGIN LINK -->
+                <p class="login-link">
+                    Already have an account?
+                    <a href="login.html">Log in</a>
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <p>
+            &copy; 2026 WeCan Connect. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
