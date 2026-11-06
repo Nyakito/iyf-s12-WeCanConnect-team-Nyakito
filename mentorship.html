@@ -42,7 +42,7 @@
 
   <section id="mentors">
     <h2>Meet some of our mentors</h2>
-    <p>These are sample profiles. Replace them with your real mentors.</p>
+    <p>These are sample profiles. Replace them with your real mentors.</p>//this section acts as the alumni directory, where students can view the profiles of available mentors and their areas of expertise.but its just to show the sample of what we need to do, we will need to replace the sample profiles with real mentors from the database.
 
     <article>
       <h3>Amina Otieno</h3>
@@ -97,10 +97,64 @@
         <input type="email" id="email" name="email" autocomplete="email" required>
       </p>
 
-      <p>
-        <label for="course">Course or field</label><br>
-        <input type="text" id="course" name="course" placeholder="e.g. Economics" required>
-      </p>
+      <label for="course">Course or field</label><br>
+<select id="course" name="course" required>
+    <option value="" disabled selected>Select your course</option>
+
+    <optgroup label="Computer Department">
+        <option value="Computer Packages">Computer Packages</option>
+        <option value="Graphics & Design">Graphics & Design</option>
+        <option value="Programming">Programming</option>
+        <option value="UI (User Interaction)">UI (User Interaction)</option>
+        <option value="AI (Artificial Intelligence)">AI (Artificial Intelligence)</option>
+    </optgroup>
+
+    <optgroup label="Language Department">
+        <option value="English">English</option>
+        <option value="French">French</option>
+        <option value="Korean">Korean</option>
+        <option value="German">German</option>
+        <option value="Chinese">Chinese</option>
+        <option value="Sign Language">Sign Language</option>
+    </optgroup>
+
+    <optgroup label="Technical Department">
+        <option value="Automotive Repair">Automotive Repair</option>
+        <option value="CCTV & Networking">CCTV & Networking</option>
+        <option value="Paramedics">Paramedics</option>
+        <option value="Driving">Driving</option>
+    </optgroup>
+
+    <optgroup label="Media Department">
+        <option value="Digital Marketing">Digital Marketing</option>
+        <option value="Video Editing">Video Editing</option>
+        <option value="Camera Operations">Camera Operations</option>
+        <option value="News and TV Production">News and TV Production</option>
+    </optgroup>
+
+    <optgroup label="Cosmetology Department">
+        <option value="Hair">Hair</option>
+        <option value="Beauty">Beauty</option>
+        <option value="Barbering">Barbering</option>
+    </optgroup>
+
+    <optgroup label="Construction Department">
+        <option value="Carpentry">Carpentry</option>
+        <option value="Plumbing">Plumbing</option>
+        <option value="Welding">Welding</option>
+        <option value="Masonry/Plastering">Masonry/Plastering</option>
+        <option value="Electrical Installation">Electrical Installation</option>
+    </optgroup>
+
+    <optgroup label="Leadership Department">
+        <option value="Mind Education">Mind Education</option>
+        <option value="Theology">Theology</option>
+    </optgroup>
+
+    <optgroup label="Hospitality Department">
+        <option value="Catering">Catering</option>
+    </optgroup>
+</select>
 
       <p>
         <label for="year">Year of study (students) or graduation year (alumni)</label><br>
