@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mentorship | WeCan Connect</title>
+</head>
+<body>
+
+<header>
+  <h1>WeCan Connect</h1>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="mentorship.html">Mentorship</a> |
+    <a href="about.html">About</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<hr>
+
+<main>
+
+  <section>
+    <h2>Mentorship</h2>
+    <p>Ask someone who has already done it. WeCan Connect pairs continuing students with alumni who can give advice and guidance on courses, internships, careers, and life after graduation.</p>
+    <ul>
+      <li><a href="#join">I'm a student: find an alumni mentor</a></li>
+      <li><a href="#join">I'm an alumnus: offer my time and advice</a></li>
+    </ul>
+  </section>
+
+  <section id="how">
+    <h2>How mentorship works</h2>
+    <ol>
+      <li><strong>Sign up.</strong> Tell us who you are and what you want to talk about.</li>
+      <li><strong>Get matched.</strong> We match you by field of study, interests, and availability.</li>
+      <li><strong>Meet.</strong> Chat online or in person. Most pairs meet once or twice a month.</li>
+      <li><strong>Grow.</strong> Set goals together and check your progress each term.</li>
+    </ol>
+  </section>
+
+  <section id="mentors">
+    <h2>Meet some of our mentors</h2>
+    <p>These are sample profiles. Replace them with your real mentors.</p>//this section acts as the alumni directory, where students can view the profiles of available mentors and their areas of expertise.but its just to show the sample of what we need to do, we will need to replace the sample profiles with real mentors from the database.
+
+    <article>
+      <h3>Amina Otieno</h3>
+      <p>Software engineer, Class of 2019</p>
+      <p>Can help with first jobs, technical interviews, and building a portfolio.</p>
+      <p>Topics: Careers, Technology</p>
+    </article>
+
+    <article>
+      <h3>David Kamau</h3>
+      <p>Accountant, Class of 2017</p>
+      <p>Can help with professional exams, internships, and choosing a career path.</p>
+      <p>Topics: Business, Careers</p>
+    </article>
+
+    <article>
+      <h3>Grace Mwangi</h3>
+      <p>Master's student, Class of 2021</p>
+      <p>Can help with study habits, research projects, and scholarship applications.</p>
+      <p>Topics: Academics, Further study</p>
+    </article>
+
+    <article>
+      <h3>Samuel Hassan</h3>
+      <p>Startup founder, Class of 2015</p>
+      <p>Can help with turning an idea into a business and finding your first customers.</p>
+      <p>Topics: Business, Technology</p>
+    </article>
+  </section>
+
+  <section id="join">
+    <h2>Join the programme</h2>
+    <p>It takes about two minutes. We'll email you when we find a match.</p>
+
+    <form action="#" method="post">
+
+      <fieldset>
+        <legend>I am a</legend>
+        <input type="radio" id="r-student" name="role" value="student" checked>
+        <label for="r-student">Continuing student</label>
+        <input type="radio" id="r-alumni" name="role" value="alumni">
+        <label for="r-alumni">Alumnus</label>
+      </fieldset>
+
+      <p>
+        <label for="name">Full name</label><br>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+      </p>
+
+      <p>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </p>
+
+      <label for="course">Course or field</label><br>
+<select id="course" name="course" required>
+    <option value="" disabled selected>Select your course</option>
+
+    <optgroup label="Computer Department">
+        <option value="Computer Packages">Computer Packages</option>
+        <option value="Graphics & Design">Graphics & Design</option>
+        <option value="Programming">Programming</option>
+        <option value="UI (User Interaction)">UI (User Interaction)</option>
+        <option value="AI (Artificial Intelligence)">AI (Artificial Intelligence)</option>
+    </optgroup>
+
+    <optgroup label="Language Department">
+        <option value="English">English</option>
+        <option value="French">French</option>
+        <option value="Korean">Korean</option>
+        <option value="German">German</option>
+        <option value="Chinese">Chinese</option>
+        <option value="Sign Language">Sign Language</option>
+    </optgroup>
+
+    <optgroup label="Technical Department">
+        <option value="Automotive Repair">Automotive Repair</option>
+        <option value="CCTV & Networking">CCTV & Networking</option>
+        <option value="Paramedics">Paramedics</option>
+        <option value="Driving">Driving</option>
+    </optgroup>
+
+    <optgroup label="Media Department">
+        <option value="Digital Marketing">Digital Marketing</option>
+        <option value="Video Editing">Video Editing</option>
+        <option value="Camera Operations">Camera Operations</option>
+        <option value="News and TV Production">News and TV Production</option>
+    </optgroup>
+
+    <optgroup label="Cosmetology Department">
+        <option value="Hair">Hair</option>
+        <option value="Beauty">Beauty</option>
+        <option value="Barbering">Barbering</option>
+    </optgroup>
+
+    <optgroup label="Construction Department">
+        <option value="Carpentry">Carpentry</option>
+        <option value="Plumbing">Plumbing</option>
+        <option value="Welding">Welding</option>
+        <option value="Masonry/Plastering">Masonry/Plastering</option>
+        <option value="Electrical Installation">Electrical Installation</option>
+    </optgroup>
+
+    <optgroup label="Leadership Department">
+        <option value="Mind Education">Mind Education</option>
+        <option value="Theology">Theology</option>
+    </optgroup>
+
+    <optgroup label="Hospitality Department">
+        <option value="Catering">Catering</option>
+    </optgroup>
+</select>
+
+      <p>
+        <label for="year">Year of study (students) or graduation year (alumni)</label><br>
+        <input type="text" id="year" name="year" placeholder="e.g. Year 2 or 2019" required>
+      </p>
+
+      <p>
+        <label for="topic">What should we focus on?</label><br>
+        <select id="topic" name="topic">
+          <option>Careers</option>
+          <option>Academics</option>
+          <option>Business</option>
+          <option>Technology</option>
+          <option>Further study</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="msg">Anything else we should know?</label><br>
+        <textarea id="msg" name="msg" rows="5" cols="40"></textarea>
+      </p>
+
+      <p><button type="submit">Join mentorship</button></p>
+    </form>
+  </section>
+
+  <section id="faq">
+    <h2>Common questions</h2>
+
+    <h3>Does it cost anything?</h3>
+    <p>No. Mentorship on WeCan Connect is free for students and alumni.</p>
+
+    <h3>How much time will it take?</h3>
+    <p>Most pairs meet for about an hour, once or twice a month. You agree the schedule together.</p>
+
+    <h3>Can I change my mentor?</h3>
+    <p>Yes. If the match isn't working, contact us and we'll find someone else.</p>
+
+    <h3>Who can become a mentor?</h3>
+    <p>Any graduate who wants to share their experience. We'll check your alumni status before you're listed.</p>
+  </section>
+
+</main>
+
+<hr>
+
+<footer>
+  <p>&copy; WeCan Connect. <a href="contact.html">Contact us</a></p>
+</footer>
+
+</body>
+</html>
