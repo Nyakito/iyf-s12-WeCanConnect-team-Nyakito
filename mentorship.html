@@ -4,17 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mentorship | WeCan Connect</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-  <h1>WeCan Connect</h1>
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="mentorship.html">Mentorship</a> |
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a>
-  </nav>
+  <nav aria-label="Main navigation">
+    <a href="index.html" class="logo">WeCan Connect</a>
+    <button type="button" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+    <ul id="primary-navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="feed.html">Tech Feed</a></li>
+        <li><a href="bounties.html">Bounties</a></li>
+        <li><a href="showcase.html">Showcase</a></li>
+        <li><a href="mentorship.html" aria-current="page">Mentorship</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="login.html#sign-up">Join Community</a></li>
+    </ul>
+</nav>
 </header>
 
 <hr>
@@ -202,8 +212,8 @@
 <hr>
 
 <footer>
-  <p>&copy; WeCan Connect. <a href="contact.html">Contact us</a></p>
+  <p>&copy; 2026 WeCan Connect. All rights reserved.</p>
 </footer>
-
+<script src="nav.js"></script>
 </body>
 </html>
