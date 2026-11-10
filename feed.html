@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Feed | WeCan Connect</title>
+    <meta name="description" content="Share learning updates, coding experiences, project progress, and community news on the WeCan Connect Tech Feed.">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -65,7 +66,7 @@
             </div>
 
             <div id="posts-container">
-                <article class="post-card">
+                <article class="post-card" data-category="project">
                     <p>Project Update</p>
                     <div class="post-author">
                         <h3>Daisy Awuor</h3>
@@ -81,7 +82,7 @@
                             Excited to be part of building this platform!
                         </p>
                         <p>
-                            <a href="https://github.com/iyf-s12-WeCanConnect-team-Nyakito">View the project on GitHub</a>
+                           <a href="https://github.com/Nyakito/iyf-s12-WeCanConnect-team-Nyakito" target="_blank" rel="noopener noreferrer">View the project on GitHub</a>
                         </p>
                     </div>
                     <div class="post-actions">
@@ -90,11 +91,13 @@
                     </div>
                     <div class="post-comments">
                         <h4>Comments</h4>
-                        <form>
+                        <div id="comments-list" aria-live="polite">
+                     </div>
+                        <form id="comment-form">
                             <label for="comment-text">Write a comment</label>
-                            <textarea id="comment-text" name="comment" placeholder="Write a comment..."></textarea>
+                           <textarea id="comment-text" name="comment" placeholder="Write a comment..." required></textarea>
                             <button type="submit">Post Comment</button>
-                        </form>
+                        </form> 
                     </div>
                 </article>
             </div>
