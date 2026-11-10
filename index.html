@@ -1,230 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="WeCan Connect brings together WeCan Academy students, alumni and mentors to learn, collaborate and grow in technology."
-    >
+    <meta name="description" content="WeCan Connect brings together WeCan Academy students, alumni and mentors to learn, collaborate and grow in technology.">
     <title>WeCan Connect | Grow Together</title>
-
-    <!-- Shared stylesheets -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-    <!-- Skip link for keyboard and screen-reader users -->
     <a href="#main-content" class="skip-link">Skip to content</a>
 
-    <!-- HEADER & NAVIGATION -->
-    <header>
-
+    <header class="site-header">
         <nav aria-label="Main navigation">
-
-            <a href="index.html" class="logo">
-                WeCan Connect
-            </a>
-
-            <button
-                type="button"
-                id="menu-toggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                aria-controls="primary-navigation"
-            >
-                Menu
-            </button>
-
+            <a href="index.html" class="logo">WeCan Connect</a>
+            <button type="button" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
             <ul id="primary-navigation">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#features">Features</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="login.html">Login</a>
-                </li>
-
-                <li>
-                    <a href="register.html" class="btn btn-primary">Join Community</a>
-                </li>
-
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="feed.html">Tech Feed</a></li>
+                <li><a href="bounties.html">Bounties</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html#sign-up">Join Community</a></li>
             </ul>
-
         </nav>
-
     </header>
 
-
-    <!-- MAIN CONTENT -->
     <main id="main-content">
-
-        <!-- HERO SECTION -->
         <section id="home" aria-labelledby="hero-heading">
-
             <p class="tagline">Because together, we can</p>
-
-            <h1 id="hero-heading">
-                Learn Together. Build Together. Grow Together.
-            </h1>
-
+            <h1 id="hero-heading">Learn Together. Build Together. Grow Together.</h1>
             <p>
                 WeCan Connect is a community platform bringing together
                 technology students, alumni and mentors to share knowledge,
                 explore opportunities, showcase projects and support
                 one another.
             </p>
-
             <div class="hero-actions">
-
-                <a href="register.html" class="btn btn-primary">
-                    Join the Community
-                </a>
-
-                <a href="#features" class="btn btn-secondary">
-                    Explore Features
-                </a>
-
+                <a href="login.html#sign-up" class="btn btn-primary">Join the Community</a>
+                <a href="#features" class="btn btn-secondary">Explore Features</a>
             </div>
-
         </section>
 
-
-        <!-- FEATURES SECTION -->
         <section id="features" aria-labelledby="features-heading">
-
-            <h2 id="features-heading">
-                Discover What You Can Do
-            </h2>
-
-            <p>
-                Connect, collaborate and discover opportunities
-                to grow your technology skills.
-            </p>
-
+            <h2 id="features-heading">Discover What You Can Do</h2>
+            <p>Connect, collaborate and discover opportunities to grow your technology skills.</p>
 
             <div class="features-container">
-
-                <!-- TECH FEED -->
                 <article class="card">
-
                     <h3>Tech Feed</h3>
-
-                    <p>
-                        Share learning experiences, ask questions,
-                        exchange ideas and learn from other members.
-                    </p>
-
-                    <a href="feed.html">
-                        Explore Tech Feed
-                    </a>
-
+                    <p>Share learning experiences, ask questions, exchange ideas and learn from other members.</p>
+                    <a href="feed.html">Explore Tech Feed</a>
                 </article>
 
-
-                <!-- BOUNTIES -->
                 <article class="card">
-
                     <h3>Bounties</h3>
-
-                    <p>
-                        Take on technical challenges, solve real-world
-                        problems and demonstrate your skills.
-                    </p>
-
-                    <a href="bounties.html">
-                        Explore Bounties
-                    </a>
-
+                    <p>Take on technical challenges, solve real-world problems and demonstrate your skills.</p>
+                    <a href="bounties.html">Explore Bounties</a>
                 </article>
 
-
-                <!-- SHOWCASE -->
                 <article class="card">
-
                     <h3>Project Showcase</h3>
-
-                    <p>
-                        Display your projects, share your achievements,
-                        receive feedback and get inspired by others.
-                    </p>
-
-                    <a href="showcase.html">
-                        View Projects
-                    </a>
-
+                    <p>Display your projects, share your achievements, receive feedback and get inspired by others.</p>
+                    <a href="showcase.html">View Projects</a>
                 </article>
 
-
-                <!-- MENTORSHIP -->
                 <article class="card">
-
                     <h3>Mentorship</h3>
-
-                    <p>
-                        Connect with experienced alumni and mentors
-                        who can guide your learning and career journey.
-                    </p>
-
-                    <a href="mentorship.html">
-                        Find a Mentor
-                    </a>
-
+                    <p>Connect with experienced alumni and mentors who can guide your learning and career journey.</p>
+                    <a href="mentorship.html">Find a Mentor</a>
                 </article>
 
-
-                <!-- RECOGNITION -->
                 <article class="card">
-
                     <h3>Recognition</h3>
-
-                    <p>
-                        Celebrate contributions, completed challenges,
-                        outstanding projects and community achievements.
-                    </p>
-
-                    <a href="register.html">
-                        Start earning badges
-                    </a>
-
+                    <p>Celebrate contributions, completed challenges, outstanding projects and community achievements.</p>
+                    <a href="login.html#sign-up">Start earning badges</a>
                 </article>
-
             </div>
-
         </section>
 
-
-        <!-- ABOUT SECTION  -->
         <section id="about" aria-labelledby="about-heading">
-
-            <h2 id="about-heading">
-                About WeCan Connect
-            </h2>
-
+            <h2 id="about-heading">About WeCan Connect</h2>
             <h3>More Than a Community. A Place to Grow.</h3>
-
             <p>
                 WeCan Connect is a community platform designed to bring
                 together students, alumni and mentors within the
                 WeCan Academy network.
             </p>
-
             <p>
                 Inspired by the learning and collaboration encouraged
                 at WeCan Academy, the platform creates opportunities
@@ -232,109 +97,48 @@
                 collaborate on projects and support one another
                 beyond the classroom.
             </p>
-
             <p>
                 Whether you are beginning your technology journey
                 or already building your career, WeCan Connect
                 provides a space where you can learn, contribute
                 and grow.
             </p>
-
         </section>
 
-
-        <!-- COMMUNITY CALL TO ACTION -->
         <section id="join-community" aria-labelledby="join-heading">
-
-            <h2 id="join-heading">
-                Your Next Opportunity Starts Here.
-            </h2>
-
-            <p>
-                Be part of a growing community of learners,
-                innovators and technology enthusiasts.
-            </p>
-
-            <a href="register.html" class="btn btn-primary">
-                Join WeCan Connect
-            </a>
-
+            <h2 id="join-heading">Your Next Opportunity Starts Here.</h2>
+            <p>Be part of a growing community of learners, innovators and technology enthusiasts.</p>
+            <a href="login.html#sign-up" class="btn btn-primary">Join WeCan Connect</a>
         </section>
-
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-
-        <!-- Contact information -->
+    <footer class="site-footer">
         <section aria-labelledby="contact-heading">
-
-            <h2 id="contact-heading">
-                Get in Touch
-            </h2>
-
+            <h2 id="contact-heading">Get in Touch</h2>
             <address>
-
-                <p>
-                    Phone:
-                    <a href="tel:+254708333444">
-                        0708 333 444
-                    </a>
-                </p>
-
-                <p>
-                    Other line:
-                    <a href="tel:+254704333111">
-                        0704 333 111
-                    </a>
-                </p>
-
-                <p>
-                    Location: WeCan Academy / IYF Headquarters, Kenya
-                </p>
-
+                <p>Phone: <a href="tel:+254708333444">0708 333 444</a></p>
+                <p>Other line: <a href="tel:+254704333111">0704 333 111</a></p>
+                <p>Location: WeCan Academy / IYF Headquarters, Kenya</p>
             </address>
-
         </section>
-
-        <!-- Footer navigation -->
         <nav aria-label="Footer navigation">
-
             <h2>Quick Links</h2>
-
             <ul>
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About Us</a>
-                </li>
-
-                <li>
-                    <a href="login.html">Login</a>
-                </li>
-
-                <li>
-                    <a href="register.html">Join Community</a>
-                </li>
-
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="feed.html">Tech Feed</a></li>
+                <li><a href="bounties.html">Bounties</a></li>
+                <li><a href="showcase.html">Showcase</a></li>
+                <li><a href="mentorship.html">Mentorship</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="login.html#sign-up">Join Community</a></li>
             </ul>
-
         </nav>
-
-        <!-- Copyright -->
-        <div class="footer-bottom">
-
-            <p>
-                &copy; 2026 WeCan Connect.
-                All rights reserved.
-            </p>
-
-        </div>
-
+        <p class="footer-bottom">&copy; 2026 WeCan Connect. All rights reserved.</p>
     </footer>
+    <script src="nav.js"></script>
 </body>
-
 </html>
